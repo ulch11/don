@@ -1,9 +1,9 @@
-#ifndef 
-#define 
+#ifndef __CSCREEN_H__
+#define __CSCREEN_H__
 #include <windows.h>
 class CSScreenException {
 public:
-    CSScreenException(int _err) : err(_err) 
+    CSScreenException(int _err) : err(_err) {}
     const char *what();      
     int err;              
 };
@@ -13,7 +13,7 @@ public:
     ~CScreen();
     void cursor_show(bool visible);        
     void text_attr(WORD attr);                     
-    void pos(int x, int y, char ch);    
+    void pos(int x, int y, char ch = 0);    
     void pos_str(int x, int y, const char *str);    
     void cls();                
 private:
@@ -22,4 +22,3 @@ private:
     WORD oldTextAttr;
 };
 #endif // __CSCREEN_H__
-
