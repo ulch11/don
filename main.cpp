@@ -8,7 +8,7 @@ int main() {
     try {
         CScreen screen;
         screen.cursor_show(false);
-        screen.text_attr((WORD)0x0a);
+        screen.text_attr((WORDd)0x0a);
         screen.cls();
         CGame game(screen, 80, 24, 120);
         game.logo();
